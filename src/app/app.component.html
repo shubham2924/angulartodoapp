@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  Todo app 
+  <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
+    <button mat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>logout
+    </button>
+  </ng-container>
+  <ng-template #loginButton>
+    <button mat-button routerLink="login">
+      <mat-icon>login</mat-icon>login
+    </button>
+  </ng-template>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

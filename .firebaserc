@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-3db66": {
+      "hosting": {
+        "my-app": [
+          "angular-3db66"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-3db66"
+  }
+}
