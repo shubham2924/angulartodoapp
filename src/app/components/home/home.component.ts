@@ -45,8 +45,7 @@ export class HomeComponent implements OnInit {
   updateData(id: string) {
     const dataToUpdate = doc(this.firestore, 'users', id);
     updateDoc(dataToUpdate, {
-      name: 'Nishant',
-      email: 'Nishant123@gmail.com'
+      name: 'updated new task'
     })
       .then(() => {
         alert('Data updated');

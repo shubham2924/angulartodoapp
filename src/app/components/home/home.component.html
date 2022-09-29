@@ -1,45 +1,29 @@
-<p>home works!</p>
 <div class="form-container">
-<form #loginForm="ngForm" (ngSubmit)="addData(loginForm.value)">
+  <form #loginForm="ngForm" (ngSubmit)="addData(loginForm.value)">
     <div class="main">
       <div class="input-fields">
         <mat-form-field appearance="outline">
-            <mat-label>Add a Task</mat-label>
-        <input matInput name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" />
-    </mat-form-field>
-    </div>
-    <button mat-raised-button color="primary">
-        Add Task
-    </button>
-    </div>
-  </form></div><br><hr width="25%"><br><br>
-  <div class="form-container">
-    <ul>
-      <li *ngFor="let item of data">
-        {{ item.name }} &nbsp;&nbsp;&nbsp;
-        <!-- <button (click)="updateData(item.id)">
-          Update
-        </button> -->
-        <button (click)="updateData(item.id)" mat-raised-button color="accent">Update</button>&nbsp;&nbsp;
-        <!-- <button (click)="deleteData(item.id)">
-          Delete
-        </button> -->
-        <button (click)="deleteData(item.id)" mat-raised-button color="warn">Delete</button>
-        <br><br>
-      </li>
-    </ul>
-  </div>
-<!-- 
-  <div class="form-container">
-    <form #loginForm="ngForm" (ngSubmit)="addData(loginForm.value)">
-        <mat-form-field appearance="outline">
-            <mat-label>Add a Task</mat-label>
-            <input matInput name="value" ngModel placeholder="Name" id="value" type="text"  formControlName="value" />
+          <mat-label>Add a Task</mat-label>
+          <input matInput name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" />
         </mat-form-field>
-        <div class="margin-top center">
-        <button mat-raised-button color="primary" type="submit">
-            Add
-        </button>
+      </div>
+      <button mat-raised-button color="primary">
+        Add Task
+      </button>
     </div>
-    </form>
-    </div> -->
+  </form>
+</div><br>
+<hr width="25%"><br><br>
+<div class="form-container">
+  Your Tasks:
+  <ul>
+    <li *ngFor="let item of data">
+      {{ item.name }} &nbsp;&nbsp;&nbsp;
+      <div class="actionbtn">
+        <button (click)="updateData(item.id)" mat-raised-button color="accent">Update</button>&nbsp;&nbsp;
+        <button (click)="deleteData(item.id)" mat-raised-button color="warn">Delete</button>
+      </div>
+      <br><br>
+    </li>
+  </ul>
+</div>
